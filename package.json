@@ -14,7 +14,8 @@
   },
   "homepage": "https://github.com/DenisBrez/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^12.1.0"
+    "commander": "^12.1.0",
+    "lodash": "^4.17.21"
   },
   "type": "module",
   "scripts": {
@@ -28,7 +29,7 @@
   "devDependencies": {
     "@babel/plugin-transform-modules-commonjs": "^7.26.3",
     "@eslint/js": "^9.24.0",
-    "eslint": "^9.24.0",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.31.0",
     "globals": "^16.0.0",
