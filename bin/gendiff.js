@@ -12,10 +12,6 @@ program
   .arguments('<filepath1> <filepath2>')
   .option('-f, --format [type]', 'output format', 'stylish')
   .action((filepath1, filepath2, options) => {
-    if (!filepath1 || !filepath2) {
-      console.error('Error: Both file paths are required');
-      process.exit(1);
-    }
     const diff = getDiff(filepath1, filepath2, options.format);
     console.log(diff);
   });
