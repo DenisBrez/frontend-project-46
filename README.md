@@ -18,11 +18,14 @@
 git clone https://github.com/DenisBrez/frontend-project-46
 cd frontend-project-46
 make install
-npm link
+npm link 
+```
 
-##  Применение 
-
-gendiff -h # Показать справку 
-gendiff -V # Показать версию 
-gendiff file1 file2 # Сравнить два файла (формат по умолчанию: стильный) 
-gendiff --format `формат` file1 file2 # Сравнить файлы в предпочитаемом формате (доступные форматы: стильный, обычный, json)
+##  применение
+ ```bash
+gendiff -h                        # Показать справку
+gendiff -V                        # Показать версию
+gendiff file1 file2              # Сравнение двух файлов (формат по умолчанию: stylish)
+gendiff --format plain file1 file2  # Сравнение в формате plain
+gendiff --format json file1 file2   # Сравнение в формате json
+```
