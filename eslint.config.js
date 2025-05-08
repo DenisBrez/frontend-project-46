@@ -1,49 +1,26 @@
-import { defineConfig } from 'eslint/config';
-import globals from 'globals';
-import pluginJs from '@eslint/js';
-import importPlugin from 'eslint-plugin-import';
-import stylistic from '@stylistic/eslint-plugin';
+import pluginJs from '@eslint/js'
+import stylistic from '@stylistic/eslint-plugin'
+import globals from 'globals'
 
-export default defineConfig([
-
+export default [
   stylistic.configs.recommended,
-
+  pluginJs.configs.recommended,
   {
     files: ['**/*.{js,mjs,cjs}'],
     languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
         ...globals.node,
-        ...globals.jest,
+        ...globals.jest, 
       },
-      parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
-      },
-    },
-    plugins: {
-      js: pluginJs,
-      import: importPlugin,
     },
     rules: {
-      ...pluginJs.configs.recommended.rules,
-      ...importPlugin.configs.recommended.rules,
-
-      'no-underscore-dangle': [
-        'error',
-        {
-          allow: ['__filename', '__dirname'],
-        },
-      ],
-      'import/extensions': [
-        'error',
-        {
-          js: 'always',
-        },
-      ],
-      'import/no-named-as-default': 'off',
-      'import/no-named-as-default-member': 'off',
+      'no-unused-vars': 'warn',
       'no-console': 'off',
-      'import/no-extraneous-dependencies': 'off',
     },
   },
-]);
+  {
+    ignores: ['dist/'],
+  },
+]

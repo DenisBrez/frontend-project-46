@@ -1,3 +1,3 @@
-const formatJson = (data) => JSON.stringify(data, null, 2);
+const formatJson = data => JSON.stringify(data, null, 2)
 
-export default formatJson;
+export default formatJson
