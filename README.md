@@ -12,6 +12,13 @@
 - `plain`  
 - `json`
 
+## Аскинема
+```bash
+Основной формат https://asciinema.org/a/MUkAcx339SsmbZjPcs3OcXoDj
+Простой формат https://asciinema.org/a/STDntyeL1mvvhEGSgkEkKTD1F
+Json формат https://asciinema.org/a/gLusYWJZpnEohyqUkXwtXcqKp
+```
+
 ##  Установка
 
 ```bash
@@ -21,7 +28,7 @@ make install
 npm link 
 ```
 
-##  применение
+##  Применение
  ```bash
 gendiff -h                        # Показать справку
 gendiff -V                        # Показать версию
